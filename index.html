@@ -14,13 +14,53 @@
     <!-- 高斯模糊背景 -->
     <div class="bg"></div>
 
-    <!-- 白色圆角博客卡片 -->
-    <main class="blog-card">
-        <div id="content" class="markdown-body"></div>
-    </main>
+    <!-- 左右两栏容器 -->
+    <div class="layout">
+
+        <!-- 左侧：事情侧边栏 -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">📌 我的事情</h2>
+            <ul class="todo-list">
+                <li class="todo-item">
+                    <span class="todo-dot"></span>
+                    <div>
+                        <strong>学习 Rust</strong>
+                        <p>每天刷一点 LeetCode</p>
+                    </div>
+                </li>
+                <li class="todo-item">
+                    <span class="todo-dot"></span>
+                    <div>
+                        <strong>健身</strong>
+                        <p>每周三次，跑步 + 力量</p>
+                    </div>
+                </li>
+                <li class="todo-item">
+                    <span class="todo-dot"></span>
+                    <div>
+                        <strong>写博客</strong>
+                        <p>每周更新一篇技术文</p>
+                    </div>
+                </li>
+                <li class="todo-item">
+                    <span class="todo-dot"></span>
+                    <div>
+                        <strong>读书</strong>
+                        <p>本月目标：读完 2 本</p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- 右侧：博客正文卡片 -->
+        <main class="blog-card">
+            <div id="content" class="markdown-body"></div>
+        </main>
+
+    </div>
 
     <script>
-        // 在这里写你的 Markdown 博客内容（注意转义：</ 写成 <\/ 或直接改下面写法）
+        // 在这里写你的 Markdown 博客内容
         const markdownText = `
 # 欢迎来到我的博客 👋
 
