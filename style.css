@@ -146,3 +146,32 @@ body {
     .blog-card { padding: 24px 20px; border-radius: 14px; }
     .markdown-body h1 { font-size: 1.6rem; }
 }
+
+/* 按钮样式（替代原来的 todo-list 链接） */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.todo-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #e0e0e0;        /* 浅灰描边，不蓝 */
+    border-radius: 10px;
+    color: #333;
+    text-decoration: none;            /* 去掉下划线 */
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.todo-btn:hover {
+    background: #f0f4ff;              /* 浅色底，不带蓝线 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    text-decoration: none;            /* 悬浮也不出下划线 */
+}
