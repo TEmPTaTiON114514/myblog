@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的博客</title>
-    <!-- 引入本地的 marked.js（不用 CDN，避免加载失败） -->
+    <!-- 引入本地 marked.js -->
     <script src="marked.min.js"></script>
-    <!-- 引入博客样式 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +13,6 @@
     <!-- 高斯模糊背景 -->
     <div class="bg"></div>
 
-    <!-- 左右两栏容器 -->
     <div class="layout">
 
         <!-- 左侧：事情侧边栏 -->
@@ -22,37 +20,33 @@
             <h2 class="sidebar-title">📌 我的事情</h2>
             <ul class="todo-list">
                 <li class="todo-item">
-                    <span class="todo-dot"></span>
-                    <div>
-                        <strong>学习 Rust</strong>
-                        <p>每天刷一点 LeetCode</p>
-                    </div>
+                    <a class="todo-link" href="/myblog/study-rust/">
+                        <span class="todo-dot"></span>
+                        <div><strong>学习 Rust</strong><p>每天刷一点 LeetCode</p></div>
+                    </a>
                 </li>
                 <li class="todo-item">
-                    <span class="todo-dot"></span>
-                    <div>
-                        <strong>健身</strong>
-                        <p>每周三次，跑步 + 力量</p>
-                    </div>
+                    <a class="todo-link" href="/myblog/fitness/">
+                        <span class="todo-dot"></span>
+                        <div><strong>健身</strong><p>每周三次，跑步 + 力量</p></div>
+                    </a>
                 </li>
                 <li class="todo-item">
-                    <span class="todo-dot"></span>
-                    <div>
-                        <strong>写博客</strong>
-                        <p>每周更新一篇技术文</p>
-                    </div>
+                    <a class="todo-link" href="/myblog/blog-writing/">
+                        <span class="todo-dot"></span>
+                        <div><strong>写博客</strong><p>每周更新一篇技术文</p></div>
+                    </a>
                 </li>
                 <li class="todo-item">
-                    <span class="todo-dot"></span>
-                    <div>
-                        <strong>读书</strong>
-                        <p>本月目标：读完 2 本</p>
-                    </div>
+                    <a class="todo-link" href="/myblog/reading/">
+                        <span class="todo-dot"></span>
+                        <div><strong>读书</strong><p>本月目标：读完 2 本</p></div>
+                    </a>
                 </li>
             </ul>
         </aside>
 
-        <!-- 右侧：博客正文卡片 -->
+        <!-- 右侧：Markdown 正文 -->
         <main class="blog-card">
             <div id="content" class="markdown-body"></div>
         </main>
@@ -60,22 +54,20 @@
     </div>
 
     <script>
-        // 在这里写你的 Markdown 博客内容
+        // 博客正文，用 Markdown 写
         const markdownText = `
 # 欢迎来到我的博客 👋
 
-这里是 **我的个人博客**，使用 Markdown 编写，marked.js 渲染。
+这是我的 **个人博客**，用 Markdown + marked.js 渲染。
 
 ---
 
 ## 关于我
-
 - 🌱 热爱编程与技术
 - 🎨 喜欢设计与创作
 - 📚 持续学习
 
 ## 技术栈
-
 | 前端 | 后端 |
 |------|------|
 | HTML/CSS | Node.js |
@@ -85,8 +77,6 @@
 
 © 2026 我的博客
         `;
-
-        // 渲染 Markdown 到页面
         document.getElementById('content').innerHTML = marked.parse(markdownText);
     </script>
 
