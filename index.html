@@ -16,35 +16,17 @@
     <div class="layout">
 
         <!-- 左侧：事情侧边栏 -->
-        <aside class="sidebar">
-            <h2 class="sidebar-title">📌 我的事情</h2>
-            <ul class="todo-list">
-                <li class="todo-item">
-                    <a class="todo-link" href="/myblog/study-rust/">
-                        <span class="todo-dot"></span>
-                        <div><strong>学习 Rust</strong><p>每天刷一点 LeetCode</p></div>
-                    </a>
-                </li>
-                <li class="todo-item">
-                    <a class="todo-link" href="/myblog/fitness/">
-                        <span class="todo-dot"></span>
-                        <div><strong>健身</strong><p>每周三次，跑步 + 力量</p></div>
-                    </a>
-                </li>
-                <li class="todo-item">
-                    <a class="todo-link" href="/myblog/blog-writing/">
-                        <span class="todo-dot"></span>
-                        <div><strong>写博客</strong><p>每周更新一篇技术文</p></div>
-                    </a>
-                </li>
-                <li class="todo-item">
-                    <a class="todo-link" href="/myblog/reading/">
-                        <span class="todo-dot"></span>
-                        <div><strong>读书</strong><p>本月目标：读完 2 本</p></div>
-                    </a>
-                </li>
-            </ul>
-        </aside>
+        <!-- 左侧：事情侧边栏 -->
+<aside class="sidebar">
+    <h2 class="sidebar-title">📌 我的事情</h2>
+    <div class="btn-group">
+        <a class="todo-btn" href="/myblog/study-rust/">学习 Rust</a>
+        <a class="todo-btn" href="/myblog/fitness/">健身</a>
+        <a class="todo-btn" href="/myblog/blog-writing/">写博客</a>
+        <a class="todo-btn" href="/myblog/reading/">读书</a>
+    </div>
+</aside>
+
 
         <!-- 右侧：Markdown 正文 -->
         <main class="blog-card">
